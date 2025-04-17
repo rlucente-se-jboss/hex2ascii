@@ -249,4 +249,4 @@ characters.
 > Results of $30 to $39 for ASCII characters '0' to '9' are adjusted
 to $70 to $79 to match the Color Computer VDG codes. The last `ora`
 instruction should be removed on systems that use standard ASCII
-codings for the display.
+encodings for the display.
