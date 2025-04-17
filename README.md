@@ -244,3 +244,7 @@ This repository includes a simple assembly language subroutine,
 [hex2ascii.asm](hex2ascii.asm), that leverages the above to convert
 both hexadecimal nibbles of a byte to their respective ASCII
 characters.
+
+> [!NOTE]
+> Results of $30 to $39 for ASCII characters '0' to '9' are adjusted
+to $70 to $79 to match the Color Computer VDG codes.
