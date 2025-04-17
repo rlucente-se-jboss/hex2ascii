@@ -184,8 +184,8 @@ hexadecimal digits. The following instructions
     adca  #$40  ; add $40 plus previous carry from DAA
     daa         ; adjust result to be correct BCD
 
-create the intermediate results shown below where an asterisk
-indicates that the carry flag was set.
+create the final results shown below where an asterisk indicates
+that the carry flag was set.
 
 | hexadecimal | Add $90 BCD | ASCII (after adding $40 BCD with carry) |
 | ----------- | ----------- | --------------------------------------- |
