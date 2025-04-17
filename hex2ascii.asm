@@ -2,7 +2,8 @@
 ;
 ; This converts the hexadecimal byte in accumulator A into its ASCII
 ; representation, e.g. A=0xbd to the two ASCII characters 'B' and
-; 'D'.
+; 'D'. See https://github.com/rlucente-se-jboss/hex2ascii for a
+; full explanation of how the conversion works.
 ;
 ; Input:
 ; A = byte to convert to ASCII
