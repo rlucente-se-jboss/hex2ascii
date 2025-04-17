@@ -10,19 +10,19 @@
 ; X = location to store ASCII characters
 ;
 ; Output:
-; A,B smashed
+; A smashed
 ; (X) is first ASCII character
 ; (X+1) is second ASCII character
 ; X = X+2
 
-hex2ascii	tfr	a,b	; save to process lower nibble later
+hex2ascii	pshs	a	; save to process lower nibble later
 		anda	#$f0	; isolate upper nibble and shift it down
 		lsra
 		lsra
 		lsra
 		lsra
 		bsr	hexconv	; convert upper nibble to ASCII and store it
-		tfr	b,a	; recover original byte
+		puls	a	; recover original byte
 		anda	#$0f	; isolate lower nibble
 hexconv		adda	#$90	; very cleverly convert to ASCII
 		daa
