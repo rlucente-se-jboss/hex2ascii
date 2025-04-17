@@ -241,6 +241,6 @@ values from $00 to $0f to the ASCII equivalent characters from '0'
 to 'F' with no branching.
 
 This repository includes a simple assembly language subroutine,
-[hex2ascii.asm](hex2ascii.asm) that leverages the above to convert
+[hex2ascii.asm](hex2ascii.asm), that leverages the above to convert
 both hexadecimal nibbles of a byte to their respective ASCII
 characters.
