@@ -28,5 +28,6 @@ hexconv		adda	#$90	; very cleverly convert to ASCII
 		daa
 		adca	#$40
 		daa
+		ora	#$40	; CoCo VDG adjustment for characters 0 - 9
 		sta	,x+	; save result
 		rts
