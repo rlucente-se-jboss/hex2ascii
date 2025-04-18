@@ -16,8 +16,7 @@
 ; X = X+2
 
 hex2ascii	pshs	a	; save to process lower nibble later
-		anda	#$f0	; isolate upper nibble and shift it down
-		lsra
+		lsra		; shift upper nibble down
 		lsra
 		lsra
 		lsra
