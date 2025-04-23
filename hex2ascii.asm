@@ -15,18 +15,18 @@
 ; (X+1) is second ASCII character
 ; X = X+2
 
-hex2ascii	pshs	a	; save to process lower nibble later
-		lsra		; shift upper nibble down
-		lsra
-		lsra
-		lsra
-		bsr	hexconv	; convert upper nibble to ASCII and store it
-		puls	a	; recover original byte
-		anda	#$0f	; isolate lower nibble
-hexconv		adda	#$90	; very cleverly convert to ASCII
-		daa
-		adca	#$40
-		daa
-		ora	#$40	; CoCo VDG adjustment for characters 0 - 9
-		sta	,x+	; save result
-		rts
+hex2ascii       pshs    a       ; save to process lower nibble later
+                lsra            ; shift upper nibble down
+                lsra
+                lsra
+                lsra
+                bsr     hexconv ; convert upper nibble to ASCII and store it
+                puls    a       ; recover original byte
+                anda    #$0f    ; isolate lower nibble
+hexconv         adda    #$90    ; very cleverly convert to ASCII
+                daa
+                adca    #$40
+                daa
+                ora     #$40    ; CoCo VDG adjustment for characters 0 - 9
+                sta     ,x+     ; save result
+                rts
